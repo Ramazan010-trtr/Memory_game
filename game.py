@@ -167,10 +167,10 @@ class MemoryGame:
                     pygame.quit()
                     sys.exit()
                 if event.type == KEYDOWN:
-                    if event.key == K_y:  # Нажатие Enter для перезапуска
+                    if event.key == K_y:  # Нажатие Y для перезапуска
                         self.__init__()
                         self.run()
-                    elif event.key == K_n:  # Нажатие Backspace для выхода
+                    elif event.key == K_n:  # Нажатие N для выхода
                         pygame.quit()
                         sys.exit()
 
@@ -179,7 +179,7 @@ class MemoryGame:
         self.start_screen()
         self.generate_cards()
         self.start_time = pygame.time.get_ticks()  # Начало отсчета времени
-        show_initial_cards_timer = 7000  # Время показа карт в начале игры (5 секунд)
+        show_initial_cards_timer = 10000  # Время показа карт в начале игры (10 секунд)
         self.timer = self.time_limit  # Устанавливаем таймер на выбранный лимит времени
         while True:
             current_time = pygame.time.get_ticks()
